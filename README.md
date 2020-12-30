@@ -1,2 +1,11 @@
 # AreaBreak
-This plugin let you disable breaking blocks in a world and enable specifics blocks to break, which respawn after a time. Perfekt for RolePlayer/Adventure Server
+
+With this plugin,
+You can protect a world from destroying,
+and select specifics Blocks (Positions),
+which a player can break.
+
+These blocks respawn after the time you selected.
+ 
+
+Perfekt for RolePlayer/Adventure Server
