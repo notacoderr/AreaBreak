@@ -33,4 +33,4 @@ alreadyouteditmode.message: "§l§5ABreak§r§7»§r§dYou aren't already in the
 editmodeleft.message: "§l§5ABreak§r§7»§r§dYou left the EditMode!"
 
 #Delay to respawn blocks (seconds)
-respawn.delay: 30
+respawn.delay: 20
