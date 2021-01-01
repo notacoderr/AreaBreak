@@ -8,7 +8,7 @@ which blocks can be broken down at which position with which tools.
 
 ### Download
 
-- [x] First you download the phar on poggit
+- [x] First you download the phar on poggit.
 - [x] Then you put the phar in your plugins folder
 - [x] At least you have to restart your server
 
