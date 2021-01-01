@@ -55,6 +55,6 @@ class BreakListener implements Listener {
 		}
 		$e->setCancelled(false);
 		$pos = $block->asVector3();
-		$this->plugin->getScheduler()->scheduleDelayedTask(new BlockTask($this->plugin, $pos, $world), intval($this->plugin->config->get("respawn.delay"));
+		$this->plugin->getScheduler()->scheduleDelayedTask(new BlockTask($this->plugin, $pos, $world), intval($this->plugin->config->get("respawn.delay") * 20);
 	}
 }
