@@ -17,7 +17,7 @@ Enjoy it!
 ### Commands
 
 | \ |command|
-|:--:|:--:|:--:|
+|:--:|:--:|
 |Add a world|`/abreak add <worldname>`|
 |Remove a world|`/abreak remove <worldname>`|
 |Enter Editmode|`/abreak join`|
