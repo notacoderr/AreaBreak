@@ -30,44 +30,44 @@ class MainCommand extends Command {
 		}
 		if(strtolower($args[0]) === "join") {
 			if(!$player->hasPermission("abreak.editmode")) {
-			$player->sendMessage($this->plugin->getConfig()->get("noperms.message"));
+			$player->sendMessage($this->plugin->config->get("noperms.message"));
 			return true;
 			}
 			if(!$this->plugin->worlds->exists($worldname)) {
-				$cfgmessage = $this->plugin->getConfig()->get("worldnotfound.message");
+				$cfgmessage = $this->plugin->config->get("worldnotfound.message");
 				$message = str_replace("{worldname}", $worldname, $cfgmessage);
 				$player->sendMessage($message);
 				return true;
 			}
 			if(isset($this->plugin->editmode[$player->getName()])) {
-				$player->sendMessage($this->plugin->getConfig()->get("alreadyineditmode.message"));
+				$player->sendMessage($this->plugin->config->get("alreadyineditmode.message"));
 				return true;
 			}
-			$cfgmessage = $this->plugin->getConfig()->get("editmodejoin.message");
+			$cfgmessage = $this->plugin->config->get("editmodejoin.message");
 			$message = str_replace("{line}", "\n", $cfgmessage);
 			$player->sendMessage($message);
 			$this->plugin->editmode[$player->getName()] = $player->getName();
 		}
 		if(strtolower($args[0]) === "leave") {
 			if(!isset($this->plugin->editmode[$player->getName()])) {
-				$player->sendMessage($this->plugin->getConfig()->get("alreadyouteditmode.message"));
+				$player->sendMessage($this->plugin->config->get("alreadyouteditmode.message"));
 				return true;
 			}
-			$player->sendMessage($this->plugin->getConfig()->get("editmodeleft.message"));
+			$player->sendMessage($this->plugin->config->get("editmodeleft.message"));
 			unset($this->plugin->editmode[$player->getName()]);
 		}
 		if(strtolower($args[0] === "add")) {
 			if(!$player->hasPermission("abreak.addworld")) {
-				$player->sendMessage($this->plugin->getConfig()->get("noperms.message"));
+				$player->sendMessage($this->plugin->config->get("noperms.message"));
 				return true;
 			}
 			if($this->plugin->worlds->exists($worldname)) {
-				$cfgmessage = $this->plugin->getConfig()->get("worldisregistered.message");
+				$cfgmessage = $this->plugin->config->get("worldisregistered.message");
 				$message = str_replace("{worldname}", $worldname, $cfgmessage);
 				$player->sendMessage($message);
 				return true;
 			}
-			$cfgmessage = $this->plugin->getConfig()->get("worldadd.message");
+			$cfgmessage = $this->plugin->config->get("worldadd.message");
 			$message = str_replace("{worldname}", $worldname, $cfgmessage);
 			$message = str_replace("{line}", "\n", $message);
 			$player->sendMessage($message);
@@ -76,16 +76,16 @@ class MainCommand extends Command {
 		}
 		if(strtolower($args[0] === "remove")) {
 			if(!$player->hasPermission("abreak.removeworld")) {
-				$player->sendMessage($this->plugin->getConfig()->get("noperms.message"));
+				$player->sendMessage($this->plugin->config->get("noperms.message"));
 				return true;
 			}
 			if(!$this->plugin->worlds->exists($worldname)) {
-				$cfgmessage = $this->plugin->getConfig()->get("worldisnotregistered.message");
+				$cfgmessage = $this->plugin->config->get("worldisnotregistered.message");
 				$message = str_replace("{worldname}", $worldname, $cfgmessage);
 				$player->sendMessage($message);
 				return true;
 			}
-			$cfgmessage = $this->plugin->getConfig()->get("worldremove.message");
+			$cfgmessage = $this->plugin->config->get("worldremove.message");
 			$message = str_replace("{worldname}", $worldname, $cfgmessage);
 			$player->sendMessage($message);
 			$this->plugin->worlds->remove($worldname);
