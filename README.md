@@ -1,3 +1,5 @@
+<img src="/assets/logo.jpg" width="400px">  
+
 # AreaBreak
 
 With this plugin,
