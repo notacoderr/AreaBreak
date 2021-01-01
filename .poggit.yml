@@ -5,6 +5,7 @@ branches:
 projects:
  AreaBreak:
     path: ""
+    icon: "/assets/poggitlogo.png"
     libs:
         version: 1.0.0
 ...
