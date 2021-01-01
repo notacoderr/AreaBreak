@@ -4,15 +4,6 @@ namespace blackbarbar486\areabreak\listener;
 
 use pocketmine\event\Listener;
 use pocketmine\event\block\BlockBreakEvent;
-use pocketmine\utils\Config;
-use pocketmine\math\Vector3;
-use pocketmine\block\Block;
-use pocketmine\item\Item;
-use pocketmine\inventory\Inventory;
-use pocketmine\level\Level;
-use pocketmine\plugin\Plugin;
-use pocketmine\Player;
-use pocketmine\Server;
 use blackbarbar486\areabreak\task\BlockTask;
 use blackbarbar486\areabreak\Main;
 
@@ -55,6 +46,7 @@ class BreakListener implements Listener {
 		}
 		$e->setCancelled(false);
 		$pos = $block->asVector3();
-		$this->plugin->getScheduler()->scheduleDelayedTask(new BlockTask($this->plugin, $pos, $world), intval($this->plugin->config->get("respawn.delay") * 20);
+		$this->plugin->getScheduler()->scheduleDelayedTask(new BlockTask($this->plugin, $pos, $world), intval($this->plugin->config->get("respawn.delay") * 20));
+	    return true;
 	}
 }

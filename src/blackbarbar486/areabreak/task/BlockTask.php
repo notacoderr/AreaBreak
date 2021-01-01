@@ -3,13 +3,10 @@
 namespace blackbarbar486\areabreak\task;
 
 use pocketmine\scheduler\Task;
-use pocketmine\utils\Config;
 use pocketmine\math\Vector3;
 use pocketmine\level\Level;
 use pocketmine\block\Block;
 use pocketmine\plugin\Plugin;
-use pocketmine\Player;
-use pocketmine\Server;
 
 class BlockTask extends Task {
 	private $pos;

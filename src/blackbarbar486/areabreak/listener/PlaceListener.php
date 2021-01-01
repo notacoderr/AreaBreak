@@ -4,9 +4,6 @@ namespace blackbarbar486\areabreak\listener;
 
 use pocketmine\event\Listener;
 use pocketmine\event\block\BlockPlaceEvent;
-use pocketmine\plugin\Plugin;
-use pocketmine\Player;
-use pocketmine\Server;
 use blackbarbar486\areabreak\Main;
 
 class PlaceListener implements Listener {
@@ -27,5 +24,6 @@ class PlaceListener implements Listener {
 			return true;
 		}
 		$e->setCancelled(true);
+		return true;
 	}
 }
