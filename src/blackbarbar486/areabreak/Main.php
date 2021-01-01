@@ -4,21 +4,17 @@ namespace blackbarbar486\areabreak;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
-use pocketmine\command\Command;
-use pocketmine\scheduler\Task as PluginTask;
 use pocketmine\utils\Config;
-use pocketmine\plugin\Plugin;
-use pocketmine\Player;
-use pocketmine\Server;
-use pocketmine\Server;
-//Task
-use blackbarbar486\areabreak\task\BlockTask;
-//Command
 use blackbarbar486\areabreak\command\MainCommand;
-//Listener
 use blackbarbar486\areabreak\listener\EditListener;
 use blackbarbar486\areabreak\listener\BreakListener;
 use blackbarbar486\areabreak\listener\PlaceListener;
+
+/**
+ * @property Config worlds
+ * @property Config blocks
+ * @property Config config
+ */
 
 class Main extends PluginBase implements Listener {
 	public $editmode = [];
