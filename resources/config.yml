@@ -1,0 +1,34 @@
+#AreaBreak
+#Version 1.0.0
+#Author blackbarbar487#2880
+#Youtube BlackCode
+
+#Player don't have requiered permission
+noperms.message: "§l§5Break§r§7»§r§dYou don't have the permission to use the AreaBreak commands!"
+
+#The world isn't registered
+worldnotfound.message: "§l§5Break§r§7»§r§dThe world {worldname} isn't registered!"
+
+#The world is already registered
+worldisregistered.message: "§l§5ABreak§r§7»§r§dThe world {worldname} is already registered!"
+
+#World added to list
+worldadd.message: "§l§5ABreak§r§7»§r§dYou've add the world {worldname}{line}Now you can add Blocks!"
+
+#The world isn't already registered
+worldisnotregistered.message: "§l§5ABreak§r§7»§r§dThe world {worldname} isn't registered!"
+
+#World removed from list
+worldremove.message: "§l§5ABreak§r§7»§r§dYou've remove the world {worldname}"
+
+#Player is already in editmode
+alreadyineditmode.message: "§l§5ABreak§r§7»§r§dYou are already in the EditMode!"
+
+#Player joined the editmode
+editmodejoin.message: "§l§5ABreak§r§7»§r§dYou joined the EditMode.{line}Tap a Block with the requiere BreakItem in your Hand, to save the Block for a BreakBlock!"
+
+#Player isn't already in editmode
+alreadyouteditmode.message: "§l§5ABreak§r§7»§r§dYou aren't already in the EditMode!"
+
+#Player left the editmode
+editmodeleft.message: "§l§5ABreak§r§7»§r§dYou left the EditMode!"
