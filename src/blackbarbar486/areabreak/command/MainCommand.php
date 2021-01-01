@@ -4,17 +4,14 @@ namespace blackbarbar486\areabreak\command;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\utils\Config;
-use pocketmine\plugin\Plugin;
 use pocketmine\Player;
-use pocketmine\Server;
 use blackbarbar486\areabreak\Main;
 
 class MainCommand extends Command {
 	private $plugin;
 	
 	public function __construct(Main $plugin) {
-		parent::__construct("abreak", "Joins the EditMode for AreaBreak", "/abreak", [""]);
+		parent::__construct("abreak", "", "/abreak", [""]);
 		$this->plugin = $plugin;
 	}
 	
@@ -91,5 +88,6 @@ class MainCommand extends Command {
 			$this->plugin->worlds->remove($worldname);
 			$this->plugin->worlds->save();
 		}
+		return true;
 	}
 }

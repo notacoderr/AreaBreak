@@ -4,14 +4,6 @@ namespace blackbarbar486\areabreak\listener;
 
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerInteractEvent;
-use pocketmine\level\Level;
-use pocketmine\block\Block;
-use pocketmine\item\Item;
-use pocketmine\inventory\Inventory;
-use pocketmine\utils\Config;
-use pocketmine\plugin\Plugin;
-use pocketmine\Player;
-use pocketmine\Server;
 use blackbarbar486\areabreak\Main;
 
 class EditListener implements Listener {
@@ -49,5 +41,6 @@ class EditListener implements Listener {
 			$this->plugin->blocks->set($coords, "$item $id $meta");
 			$this->plugin->blocks->save();
 		}
+		return true;
 	}
 }
