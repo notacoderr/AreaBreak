@@ -15,3 +15,10 @@ which blocks can be broken down at which position with which tools.
 Enjoy it!
 
 ### Commands
+
+| \ |command|
+|:--:|:--:|:--:|
+|Add a world|`/abreak add <worldname>`|
+|Remove a world|`/abreak remove <worldname>`|
+|Enter Editmode|`/abreak join`|
+|Leave Editmode|`/abreak leave`|
