@@ -10,7 +10,6 @@ use pocketmine\utils\Config;
 use pocketmine\plugin\Plugin;
 use pocketmine\Player;
 use pocketmine\Server;
-use pocketmine\Server;
 //Task
 use blackbarbar486\areabreak\task\BlockTask;
 //Command
