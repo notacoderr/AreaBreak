@@ -1,0 +1,13 @@
+name: AreaBreak
+main: blackbarbar486\areabreak\Main
+author: Blackbarbar
+version: 1.0.0
+api: 3.0.0
+
+permissions:
+ abreak.editmode:
+  default: OP
+ abreak.addworld:
+  default: OP
+ abreak.removeworld:
+  default: OP
