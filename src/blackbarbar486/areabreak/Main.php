@@ -25,17 +25,16 @@ class Main extends PluginBase implements Listener {
 	
 	public function onEnable() {
 		$this->getLogger()->info("AreaBreak was enabled!");
-		//Configs
-		@mkdir($this->getDataFolder());
-		$this->saveDefaultConfig();
+		# register configs
 		$this->saveResource("config.yml");
+		$this->config = new Config($this->getDataFolder()."config.yml", Config::YAML);
 		$this->worlds = new Config($this->getDataFolder()."worlds.yml", Config::YAML);
 		$this->blocks = new Config($this->getDataFolder()."blocks.yml", Config::YAML);
 		$this->saveResource("worlds.yml");
 		$this->saveResource("blocks.yml");
-		//Command
+		# register commands
 		$this->getServer()->getCommandMap()->register("abreak", new MainCommand($this));
-		//Listener
+		# register listener
 		$this->getServer()->getPluginManager()->registerEvents(new EditListener($this), $this);
 		$this->getServer()->getPluginManager()->registerEvents(new BreakListener($this), $this);
 		$this->getServer()->getPluginManager()->registerEvents(new PlaceListener($this), $this);
