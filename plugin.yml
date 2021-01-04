@@ -5,9 +5,9 @@ version: 1.0.0
 api: 3.0.0
 
 permissions:
- abreak.editmode:
+ areabreak.editmode:
   default: OP
- abreak.addworld:
+ areabreak.addworld:
   default: OP
- abreak.removeworld:
+ areabreak.removeworld:
   default: OP
