@@ -20,7 +20,6 @@ class Main extends PluginBase implements Listener {
 	public $editmode = [];
 	
 	public function onEnable() {
-		$this->getLogger()->info("AreaBreak was enabled!");
 		# register configs
 		$this->saveResource("config.yml");
 		$this->config = new Config($this->getDataFolder()."config.yml", Config::YAML);
@@ -34,9 +33,5 @@ class Main extends PluginBase implements Listener {
 		$this->getServer()->getPluginManager()->registerEvents(new EditListener($this), $this);
 		$this->getServer()->getPluginManager()->registerEvents(new BreakListener($this), $this);
 		$this->getServer()->getPluginManager()->registerEvents(new PlaceListener($this), $this);
-	}
-	
-	public function onDisable() {
-		$this->getLogger()->info("AreaBreak was disabled!");
 	}
 }
