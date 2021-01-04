@@ -26,7 +26,7 @@ class MainCommand extends Command {
 			return true;
 		}
 		if(strtolower($args[0]) === "join") {
-			if(!$player->hasPermission("abreak.editmode")) {
+			if(!$player->hasPermission("areabreak.editmode")) {
 			$player->sendMessage($this->plugin->config->get("noperms.message"));
 			return true;
 			}
@@ -54,7 +54,7 @@ class MainCommand extends Command {
 			unset($this->plugin->editmode[$player->getName()]);
 		}
 		if(strtolower($args[0] === "add")) {
-			if(!$player->hasPermission("abreak.addworld")) {
+			if(!$player->hasPermission("areabreak.addworld")) {
 				$player->sendMessage($this->plugin->config->get("noperms.message"));
 				return true;
 			}
@@ -72,7 +72,7 @@ class MainCommand extends Command {
 			$this->plugin->worlds->save();
 		}
 		if(strtolower($args[0] === "remove")) {
-			if(!$player->hasPermission("abreak.removeworld")) {
+			if(!$player->hasPermission("areabreak.removeworld")) {
 				$player->sendMessage($this->plugin->config->get("noperms.message"));
 				return true;
 			}
